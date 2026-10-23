@@ -2,6 +2,8 @@
 
 Este repositório fornece arquivos de configuração prontos para o LibreOffice que substituem os atalhos de teclado padrão pelos atalhos do Microsoft Office **em português do Brasil** — os mesmos que aparecem nos menus do Word, Excel e PowerPoint quando o sistema está em português.
 
+Os arquivos foram testados no **LibreOffice para Windows** e no **Zorin OS 18** (Linux, teclado ABNT2).
+
 > **Atenção:** Este projeto é um fork de [Zaki101Aslam/MS-office-shortcuts-for-Libre-Office](https://github.com/Zaki101Aslam/MS-office-shortcuts-for-Libre-Office), publicado sob a licença [Mozilla Public License 2.0](LICENSE). Os arquivos `.cfg` gerados aqui são derivados desse trabalho e estão sujeitos à mesma licença.
 
 ---
@@ -123,12 +125,12 @@ A tabela abaixo lista os principais atalhos configurados. A coluna **Status** in
 | Filtro Automático | Ctrl+Shift+L | ✅ Confirmado |
 | Formato moeda ($) | Ctrl+Shift+4 | ✅ Confirmado |
 | Formato percentual (%) | Ctrl+Shift+5 | ✅ Confirmado |
-| Formato científico | Ctrl+Shift+^ | ✅ Confirmado |
+| Formato científico | Ctrl+Shift+^ | ❌ Não funciona no LibreOffice |
 | Formato de data | Ctrl+Shift+3 | ✅ Confirmado |
 | Inserir hora | Ctrl+Alt+Q | ✅ Confirmado |
 | Formato número (decimal) | Ctrl+Shift+1 | ✅ Confirmado |
 
-> **Atenção (teclado ABNT2):** O atalho Ctrl+Shift+^ pode não funcionar com teclado ABNT2, pois o ^ é uma tecla morta (acento). Isso **precisa ser testado**.
+> **Atenção — Ctrl+Shift+^ (formato científico):** Este atalho **não funciona no LibreOffice Calc**, nem no Windows nem no Linux. O LibreOffice não consegue capturar essa combinação com o `^` do teclado ABNT2. O atalho foi mantido na tabela apenas para documentar a diferença em relação ao Excel. Se você precisar aplicar formato científico no Calc, use o menu **Formatar > Células > aba Números**.
 
 ### Impress (baseado no PowerPoint PT-BR)
 
@@ -161,10 +163,31 @@ A tabela abaixo lista os principais atalhos configurados. A coluna **Status** in
 
 ## Limitações conhecidas
 
-- Os arquivos `.cfg` foram testados no **Windows** (LibreOffice).
-- Alguns atalhos que usam teclas mortas do teclado ABNT2 (como `^` e `~`) podem não funcionar.
-- Atalhos marcados como "Inferido" precisam de confirmação direta no Word/Excel/PowerPoint.
+### Independente do sistema operacional
+
+- O atalho Ctrl+Shift+^ (formato científico do Excel) **não funciona no LibreOffice Calc em nenhum sistema operacional** — o LibreOffice não consegue capturar essa combinação com o `^` do teclado ABNT2. Para aplicar formato científico no Calc, use o menu **Formatar > Células > aba Números**.
+- Atalhos marcados como "Inferido" nas tabelas acima precisam de confirmação direta no Word/Excel/PowerPoint.
 - Atalhos que dependem da faixa de opções do Office (Alt+letra) não foram mapeados, pois o LibreOffice usa uma estrutura diferente.
+
+### No Linux — conflitos com atalhos do sistema
+
+Alguns ambientes de desktop Linux reservam certas combinações de teclas para funções do sistema, e elas são capturadas **antes** de chegarem ao LibreOffice. O atalho do sistema prevalece, e o atalho do LibreOffice simplesmente não é executado.
+
+Conflito confirmado no **Zorin OS 18** (ambiente GNOME):
+
+| Atalho | Função no `.cfg` do Writer | Função no sistema (GNOME) |
+|---|---|---|
+| Ctrl+Alt+D | Nota de fim | Minimizar todas as janelas / mostrar área de trabalho |
+
+Outros ambientes de desktop baseados em GNOME (Ubuntu, Fedora, Pop!_OS etc.) provavelmente apresentam o mesmo conflito com Ctrl+Alt+D, pois esse é o atalho padrão do GNOME para mostrar a área de trabalho. Distribuições com outros ambientes (KDE, XFCE, Cinnamon) podem ter conflitos diferentes ou nenhum conflito.
+
+Vale notar que o GNOME oferece **dois atalhos** para a mesma função de mostrar a área de trabalho: Ctrl+Alt+D e Super+D (a tecla Super é a tecla Windows do teclado). Portanto, desativar o Ctrl+Alt+D do sistema **não perde a funcionalidade** — o Super+D continua funcionando normalmente.
+
+**Como resolver**, se quiser:
+- **Opção A — Desativar apenas o Ctrl+Alt+D do sistema (recomendada):** vá em Configurações > Teclado > Atalhos de teclado > Navegação, encontre "Mostrar área de trabalho" ou "Ocultar todas as janelas normais", clique nele e pressione Backspace para remover a atribuição. O Super+D continuará funcionando para mostrar a área de trabalho.
+- **Opção B — Remover o atalho do LibreOffice:** abra o Writer, vá em Ferramentas > Personalizar > Teclado, encontre o atalho Ctrl+Alt+D e clique em "Excluir". O Ctrl+Alt+D do sistema voltará a funcionar normalmente.
+
+As duas opções são independentes — escolha a que fizer mais sentido para o seu uso.
 
 ---
 
