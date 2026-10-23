@@ -209,7 +209,7 @@ Para mais detalhes, consulte o README do projeto original (em inglês).
 ## Créditos e licença
 
 - **Projeto original:** [Zaki101Aslam/MS-office-shortcuts-for-Libre-Office](https://github.com/Zaki101Aslam/MS-office-shortcuts-for-Libre-Office)
-- **Adaptação PT-BR:** [AslanisGrimsilva/MS-office-shortcuts-for-Libre-Office](https://github.com/AslanisGrimsilva/MS-office-shortcuts-for-Libre-Office)
+- **Adaptação PT-BR:** [AslanisGrimsilva/ms-office-shortcuts-libreoffice-ptbr](https://github.com/AslanisGrimsilva/ms-office-shortcuts-libreoffice-ptbr)
 - **Licença:** [Mozilla Public License 2.0](LICENSE) — o código-fonte e os arquivos de configuração derivados do projeto original estão sujeitos a esta licença.
 
 A MPL-2.0 permite usar, modificar e redistribuir este trabalho, inclusive em projetos proprietários, desde que as modificações nos arquivos cobertos pela licença sejam disponibilizadas sob a mesma MPL-2.0. Você não precisa licenciar seu projeto inteiro sob a MPL-2.0, apenas os arquivos que vieram ou foram modificados a partir deste repositório.
