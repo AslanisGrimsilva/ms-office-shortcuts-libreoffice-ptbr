@@ -98,10 +98,10 @@ A tabela abaixo lista os principais atalhos configurados. A coluna **Status** in
 | Estilo Normal | Ctrl+Shift+Y | ✅ Confirmado |
 | Inserir comentário | Ctrl+Alt+A | ✅ Confirmado |
 | Nota de fim | Ctrl+Alt+D | ✅ Confirmado |
-| Alinhar à esquerda | Ctrl+Q | ⚠️ Inferido |
-| Alinhar à direita | Ctrl+G | ⚠️ Inferido |
-| Centralizar | Ctrl+E | ⚠️ Inferido |
-| Justificar | Ctrl+J | ⚠️ Inferido |
+| Alinhar à esquerda | Ctrl+Q | ✅ Confirmado |
+| Alinhar à direita | Ctrl+G | ✅ Confirmado |
+| Centralizar | Ctrl+E | ✅ Confirmado |
+| Justificar | Ctrl+J | ✅ Confirmado |
 | Título 1 | Ctrl+Shift+1 | ⚠️ Inferido |
 | Título 2 | Ctrl+Shift+2 | ⚠️ Inferido |
 | Título 3 | Ctrl+Shift+3 | ⚠️ Inferido |
@@ -128,7 +128,7 @@ A tabela abaixo lista os principais atalhos configurados. A coluna **Status** in
 | Inserir hora | Ctrl+Alt+Q | ✅ Confirmado |
 | Formato número (decimal) | Ctrl+Shift+1 | ✅ Confirmado |
 
-> **Atenção (Zorin OS / teclado ABNT2):** O atalho Ctrl+Shift+^ pode não funcionar no Linux com teclado ABNT2, pois o ^ é uma tecla morta (acento). Isso **precisa ser testado** no Zorin OS.
+> **Atenção (teclado ABNT2):** O atalho Ctrl+Shift+^ pode não funcionar com teclado ABNT2, pois o ^ é uma tecla morta (acento). Isso **precisa ser testado**.
 
 ### Impress (baseado no PowerPoint PT-BR)
 
@@ -161,8 +161,8 @@ A tabela abaixo lista os principais atalhos configurados. A coluna **Status** in
 
 ## Limitações conhecidas
 
-- Os arquivos `.cfg` foram testados no **Windows** (LibreOffice). Ainda precisam ser testados no **Linux (Zorin OS 18)**.
-- Alguns atalhos que usam teclas mortas do teclado ABNT2 (como `^` e `~`) podem não funcionar no Linux.
+- Os arquivos `.cfg` foram testados no **Windows** (LibreOffice).
+- Alguns atalhos que usam teclas mortas do teclado ABNT2 (como `^` e `~`) podem não funcionar.
 - Atalhos marcados como "Inferido" precisam de confirmação direta no Word/Excel/PowerPoint.
 - Atalhos que dependem da faixa de opções do Office (Alt+letra) não foram mapeados, pois o LibreOffice usa uma estrutura diferente.
 
